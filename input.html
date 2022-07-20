@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="input.css">
+	<title></title>
+</head>
+<body>
+	<div class="content">
+		<div class="form">
+			<form name="form1" method="POST" onsubmit="Validasi()" action="proses.php">
+				<h2>Form Input <br>Pengiriman Barang</h2>
+				<input type="text" name="nama_pengirim" placeholder="Nama Pengirim" id="nama_pengirim">
+				<input type="text" name="nama_penerima" placeholder="Nama Penerima" id="nama_penerima">
+				<input type="text" name="alamat" placeholder="Alamat" id="Alamat">
+				<input type="text" name="jarak" placeholder="Jarak (KM)" id="Jarak">
+				<br>
+				<textarea cols="28" rows="4" placeholder="Keterangan" name="keterangan" id="keterangan"></textarea>
+				<br>
+				<button type="submit">Simpan</button>
+				<button type="reset">Reset</button>
+			</form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function Validasi() {
+		var nm_pengirim = document.getElementById("nama_pengirim").value;
+		var nm_penerima = document.getElementById("nama_penerima").value;
+		var alamat  = document.getElementById("Alamat").value;
+		var jarak = document.getElementById("Jarak").value;
+		var keterangan = document.getElementById("keterangan").value;
+		if (nm_pengirim !="" && nm_penerima !="" && alamat!="" && jarak!="" && keterangan!="") {
+			return true;
+		}
+		else{
+			alert('Anda harus mengisi data dengan lengkap ! ');
+		}
+	}
+</script>
+</html>
